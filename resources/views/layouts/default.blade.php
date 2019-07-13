@@ -8,15 +8,17 @@
 
 <body>
 <div class="wrapper">
-    <!--=== Header ===-->
+<!--=== Header ===-->
 @include('includes.header')
 <!--=== End Header ===-->
 
-    <!--=== Slider ===-->
+<!--=== Slider ===-->
 @include('includes.slider')
+<!--=== End Slider ===-->
 
-    <!--=== End Slider ===-->
-@yield('content')
+    <div class="container content">
+        @yield('content')
+    </div>
 
 
 

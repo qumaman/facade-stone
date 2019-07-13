@@ -42,7 +42,7 @@ label {
 }
 
 a {
- color: #ac7d39;
+ color: #C72425;
  text-decoration: none;
 }
 
@@ -59,7 +59,7 @@ a:focus {
 text-decoration: none;
 }
 a:hover {
- color: #ac7d39;
+ color: #C72425;
  text-decoration: underline;
 }
 
@@ -75,4 +75,10 @@ a:hover {
   margin-left: auto !important;
   margin-right: auto !important;
   background: url(../img/patterns/15.png) repeat;
+}
+
+.stamp-images img {
+    height: 165px;
+    text-align: center !important;
+    margin: 0 auto !important;
 }
