@@ -24,7 +24,20 @@
                 <li class="topbar-devider"></li>
                 <li><a href="page_faq.html">Help</a></li>
                 <li class="topbar-devider"></li>
-                <li><a href="page_login.html">Login</a></li>
+                <li>
+                    @if (Route::has('login'))
+                            @auth
+                                <a href="{{ url('/home') }}">Home</a>
+                            @else
+                                <a href="{{ route('login') }}">Login</a>
+
+                                {{--@if (Route::has('register'))
+                                    <a href="{{ route('register') }}">Register</a>
+                                @endif--}}
+                            @endauth
+                    @endif</li>
+
+
             </ul>
         </div>
         <!-- End Topbar -->
