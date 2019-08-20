@@ -2,16 +2,16 @@
     <div class="container">
         <!-- Logo -->
         <a class="logo" href="/">
-            <img src="/assets/img/logo1-default.png" alt="Logo">
+            <img src="/assets/img/logo_default.png" alt="Logo" >
         </a>
         <!-- End Logo -->
 
         <!-- Topbar -->
         <div class="topbar">
             <ul class="loginbar pull-right">
-                <li class="hoverSelector">
+                {{--<li class="hoverSelector">
                     <i class="fa fa-globe"></i>
-                    <a>Languages</a>
+                    <a>Языки</a>
                     <ul class="languages hoverSelectorBlock">
                         <li class="active">
                             <a href="#">English <i class="fa fa-check"></i></a>
@@ -20,16 +20,14 @@
                         <li><a href="#">Russian</a></li>
                         <li><a href="#">German</a></li>
                     </ul>
-                </li>
-                <li class="topbar-devider"></li>
-                <li><a href="page_faq.html">Help</a></li>
-                <li class="topbar-devider"></li>
+                </li>--}}
+                {{--<li class="topbar-devider"></li>--}}
                 <li>
                     @if (Route::has('login'))
                             @auth
-                                <a href="{{ url('/home') }}">Home</a>
+                                <a href="{{ url('/home') }}">Админ панель</a>
                             @else
-                                <a href="{{ route('login') }}">Login</a>
+                                <a href="{{ route('login') }}">Вход</a>
 
                                 {{--@if (Route::has('register'))
                                     <a href="{{ route('register') }}">Register</a>

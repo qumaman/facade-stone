@@ -26,7 +26,7 @@
         </ul>
     </div>
     <div class="col-md-9">
-        <!--=== Purchase Block ===-->
+        {{--<!--=== Purchase Block ===-->
         <div class="purchase">
                 <div class="row">
                     <div class="col-md-9 animated fadeInLeft">
@@ -38,43 +38,111 @@
                     </div>
                 </div>
         </div><!--/row-->
-        <!-- End Purchase Block -->
+        <!-- End Purchase Block -->--}}
 
         <!--=== Content Part ===-->
         <div class="">
             <!-- Service Blocks -->
             <div class="row margin-bottom-30">
-                <div class="col-md-4">
-                    <div class="service">
-                        <i class="fa fa-compress service-icon"></i>
-                        <div class="desc">
-                            <h4>Fully Responsive</h4>
-                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus etiam sem...</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="service">
+                            <i class="fa fa-rocket service-icon"></i>
+                            <div class="desc">
+                                <h4>Фото-копировальные услуги</h4>
+                            </div>
+                            <div class="col-md-12">
+                                <p>-Цветное и черно-белое копирование и распечатка до А3+ формата</p>
+                                <p>(в наличии различные виды бумаг - глянцевая, матовая, дизайнерская)</p>
+                                <p>-Печать фотографий</p>
+                                <p>-Фото на документы</p>
+                                <p>-Переплет документов</p>
+                                <p>-Сканирование цветных документов</p>
+                                <p>-Ламинирование </p>
+                                <p>-Запись/перезапись CD|DVD дисков</p>
+                                <p>-Интернет услуги</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service">
+                            <i class="fa fa-rocket service-icon"></i>
+                            <div class="desc">
+                                <h4>Деловая полиграфия</h4>
+                            </div>
+                            <div class="col-md-12">
+                                <p>- Визитки</p>
+                                <p>- Листовки</p>
+                                <p>- Буклеты</p>
+                                <p>- Брошюры</p>
+                                <p>- Грамоты/дипломы</p>
+                                <p>- Календари</p>
+                                <p>- Каталоги</p>
+                                <p>- Самокопирующиеся бланки</p>
+                                <p>- Меню</p>
+                                <p>- Портфолио</p>
+                                <p>- Разработка логотипа </p>
+                                <p>- Редизайн</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service">
+                            <i class="fa fa-cogs service-icon"></i>
+                            <div class="desc">
+                                <h4>Печати и штампы</h4>
+                            </div>
+                            <div class="col-md-12">
+                                <p>- Печати ИП, ТОО, АО</p>
+                                <p>- Врачебные печати</p>
+                                <p>- Гербовые печати</p>
+                                <p>- Печати нотариуса</p>
+                                <p>- Штампы</p>
+                                <p>- Датеры</p>
+                                <p>- Нумераторы</p>
+                                <p>- Факсимиле</p>
+                                <p>- Экслибрис (личная печать)</p>
+                                <p>- Печати по оттиску и эскизу</p>
+                                <p>- Клише для печатей и штампов</p>
+                                <p>- Ликвидация печати</p>
+                                <p>- Аксессуары</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="service">
-                        <i class="fa fa-cogs service-icon"></i>
-                        <div class="desc">
-                            <h4>HTML5 + CSS3</h4>
-                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus etiam sem...</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="service">
+                            <i class="fa fa-compress service-icon"></i>
+                            <div class="desc">
+                                <h4>Лазерная резка и гравировка</h4>
+                            </div>
+                            <div class="col-md-12">
+                                <p>- Таблички на двери</p>
+                                <p>- Бейджи</p>
+                                <p>- Номерки</p>
+                                <p>- Декоративные рамки</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service">
-                        <i class="fa fa-rocket service-icon"></i>
-                        <div class="desc">
-                            <h4>Launch Ready</h4>
-                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus etiam sem...</p>
+                    <div class="col-md-4">
+                        <div class="service">
+                            <i class="fa fa-rocket service-icon"></i>
+                            <div class="desc">
+                                <h4>Праздничная полиграфия</h4>
+                            </div>
+                            <div class="col-md-12">
+                                <p>- Пригласительные </p>
+                                <p>- Бонбоньерки</p>
+                                <p>- Оформление шоколада</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- End Service Blokcs -->
 
-            <!-- Recent Works -->
+            {{--<!-- Recent Works -->
             <div class="headline"><h2>Recent Works</h2></div>
             <div class="row margin-bottom-20">
                 <div class="col-md-3 col-sm-6">
@@ -198,10 +266,10 @@
                     </div>
                 </div><!--/col-md-4-->
             </div>
-            <!-- End Info Blokcs -->
+            <!-- End Info Blokcs -->--}}
 
             <!-- Owl Clients v1 -->
-            <div class="headline"><h2>Our Clients</h2></div>
+            <div class="headline"><h2>Наши клиенты</h2></div>
             <div class="owl-clients-v1">
                 <div class="item">
                     <img src="assets/img/clients4/1.png" alt="">

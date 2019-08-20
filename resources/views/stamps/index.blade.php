@@ -26,7 +26,7 @@
         </ul>
     </div>
     <div class="col-md-9">
-        <!--=== Purchase Block ===-->
+        {{--<!--=== Purchase Block ===-->
         <div class="purchase">
                 <div class="row">
                     <div class="col-md-9 animated fadeInLeft">
@@ -38,11 +38,11 @@
                     </div>
                 </div>
         </div><!--/row-->
-        <!-- End Purchase Block -->
+        <!-- End Purchase Block -->--}}
 
         <!--=== Content Part ===-->
         <div class="">
-            <!-- Service Blocks -->
+            {{--<!-- Service Blocks -->
             <div class="row margin-bottom-30">
                 <div class="col-md-4">
                     <div class="service">
@@ -72,9 +72,9 @@
                     </div>
                 </div>
             </div>
-            <!-- End Service Blokcs -->
+            <!-- End Service Blokcs -->--}}
 
-            <!-- Recent Works -->
+            {{--<!-- Recent Works -->
             <div class="headline"><h2>Recent Works</h2></div>
             <div class="row margin-bottom-20">
                 <div class="col-md-3 col-sm-6">
@@ -134,35 +134,38 @@
                     </div>
                 </div>
             </div>
-            <!-- End Recent Works -->
+            <!-- End Recent Works -->--}}
 
             <!-- Info Blokcs -->
             <div class="row margin-bottom-30">
                 <!-- Welcome Block -->
-                <div class="col-md-8 md-margin-bottom-40">
-                    <div class="headline"><h2>Welcome To Unify</h2></div>
+                <ul class="col-md-12 md-margin-bottom-40">
+                    <div class="headline"><h2>Печати и штампы</h2></div>
                     <div class="row">
-                        <div class="col-sm-4">
-                            <img class="img-responsive margin-bottom-20" src="assets/img/main/img18.jpg" alt="">
-                        </div>
-                        <div class="col-sm-8">
-                            <p>Unify is an incredibly beautiful responsive Bootstrap Template for corporate and creative professionals. It works on all major web browsers, tablets and phone.</p>
+                        <div class="col-sm-12">
+                            <p>ExpressCopy — это парк оборудования, обладающий необходимыми мощностями, чтобы удовлетворить потребности заказчика в таких направлениях как оперативная полиграфия и дизайн (изготовление полиграфической продукции в короткие сроки), лазерная гравировка (изготовление печатей и штампов, многоцветных печатей, печатей с защитой от подделки), копировально — печатные услуги (копирование и печать в больших объемах) и др.</p>
+                            <blockquote class="hero-unify">
                             <ul class="list-unstyled margin-bottom-20">
-                                <li><i class="fa fa-check color-green"></i> Donec id elit non mi porta gravida</li>
-                                <li><i class="fa fa-check color-green"></i> Corporate and Creative</li>
-                                <li><i class="fa fa-check color-green"></i> Responsive Bootstrap Template</li>
-                                <li><i class="fa fa-check color-green"></i> Corporate and Creative</li>
+                                <li>- Печати ИП, ТОО, АО</li>
+                                <li>- Врачебные печати</li>
+                                <li>- Гербовые печати</li>
+                                <li>- Печати нотариуса</li>
+                                <li>- Штампы</li>
+                                <li>- Датеры</li>
+                                <li>- Нумераторы</li>
+                                <li>- Факсимиле</li>
+                                <li>- Экслибрис (личная печать)</li>
+                                <li>- Печати по оттиску и эскизу</li>
+                                <li>- Клише для печатей и штампов</li>
+                                <li>- Ликвидация печати</li>
+                                <li>- Аксессуары</li>
                             </ul>
+                            </blockquote>
                         </div>
                     </div>
-
-                    <blockquote class="hero-unify">
-                        <p>Award winning digital agency. We bring a personal and effective approach to every project we work on, which is why. Unify is an incredibly beautiful responsive Bootstrap Template for corporate professionals.</p>
-                        <small>CEO, Jack Bour</small>
-                    </blockquote>
                 </div><!--/col-md-8-->
 
-                <!-- Latest Shots -->
+                {{--<!-- Latest Shots -->
                 <div class="col-md-4">
                     <div class="headline"><h2>Latest Shots</h2></div>
                     <div id="myCarousel" class="carousel slide carousel-v1">
@@ -196,11 +199,11 @@
                             </a>
                         </div>
                     </div>
-                </div><!--/col-md-4-->
+                </div><!--/col-md-4-->--}}
             </div>
             <!-- End Info Blokcs -->
 
-            <!-- Owl Clients v1 -->
+            {{--<!-- Owl Clients v1 -->
             <div class="headline"><h2>Our Clients</h2></div>
             <div class="owl-clients-v1">
                 <div class="item">
@@ -231,7 +234,7 @@
                     <img src="assets/img/clients4/9.png" alt="">
                 </div>
             </div>
-            <!-- End Owl Clients v1 -->
+            <!-- End Owl Clients v1 -->--}}
         </div><!--/container-->
         <!-- End Content Part -->
     </div>

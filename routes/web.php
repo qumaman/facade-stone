@@ -14,8 +14,11 @@
 Route::get('/', function () {
     return view('index');
 });
-Route::resource('/stamps', 'StampsController');
-
+Route::resource('stamps', 'StampsController');
+Route::prefix('admin')->group(function () {
+    Route::post('stamps/store', 'StampController@store');
+    Route::resource('stamps', 'StampController');
+});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -4,28 +4,42 @@
             <div class="row">
                 <!-- About -->
                 <div class="col-md-3 md-margin-bottom-40">
-                    <a href="index.html"><img id="logo-footer" class="footer-logo" src="assets/img/logo2-default.png" alt=""></a>
-                    <p>About Unify dolor sit amet, consectetur adipiscing elit. Maecenas eget nisl id libero tincidunt sodales.</p>
-                    <p>Duis eleifend fermentum ante ut aliquam. Cras mi risus, dignissim sed adipiscing ut, placerat non arcu.</p>
+                    <a href="index.html"><img id="logo-footer" class="footer-logo" src="assets/img/logo_default.png" alt=""></a>
+                    <p>ExpressCopy — это парк оборудования, обладающий необходимыми
+                        мощностями, чтобы удовлетворить потребности заказчика в таких
+                        направлениях как оперативная полиграфия и дизайн
+                        (изготовление полиграфической продукции в короткие сроки),
+                        лазерная гравировка (изготовление печатей и штампов,
+                        многоцветных печатей, печатей с защитой от подделки),
+                        копировально — печатные услуги (копирование и печать
+                        в больших объемах) и др.</p>
                 </div><!--/col-md-3-->
                 <!-- End About -->
 
                 <!-- Latest -->
                 <div class="col-md-3 md-margin-bottom-40">
                     <div class="posts">
-                        <div class="headline"><h2>Latest Posts</h2></div>
+                        <div class="headline"><h2>Почему мы?</h2></div>
                         <ul class="list-unstyled latest-list">
                             <li>
-                                <a href="#">Incredible content</a>
-                                <small>May 8, 2014</small>
+                                <a href="#">Приемлемые цены</a>
+                                <small>Месторасположение нашего офиса за чертой города
+                                    позволяет нам устанавливать выгодные цены, что, несомненно, радует
+                                    наших заказчиков</small>
                             </li>
                             <li>
-                                <a href="#">Best shoots</a>
-                                <small>June 23, 2014</small>
+                                <a href="#">Собственная производственная база</a>
+                                <small>Наше оборудование позволяет
+                                    изготавливать продукцию высокого качества и в выгодные сроки для Вас.</small>
                             </li>
                             <li>
-                                <a href="#">New Terms and Conditions</a>
-                                <small>September 15, 2014</small>
+                                <a href="#">Гибкая система скидок</a>
+                                <small>для постоянных клиентов</small>
+                            </li>
+                            <li>
+                                <a href="#">Полное сопровождение клиентов</a>
+                                <small>от оформления заказа до доставки
+                                    заказа в Вашу компанию</small>
                             </li>
                         </ul>
                     </div>
@@ -34,26 +48,38 @@
 
                 <!-- Link List -->
                 <div class="col-md-3 md-margin-bottom-40">
-                    <div class="headline"><h2>Useful Links</h2></div>
+                    <div class="headline"><h2>Полезные ссылки</h2></div>
                     <ul class="list-unstyled link-list">
-                        <li><a href="#">About us</a><i class="fa fa-angle-right"></i></li>
-                        <li><a href="#">Portfolio</a><i class="fa fa-angle-right"></i></li>
-                        <li><a href="#">Latest jobs</a><i class="fa fa-angle-right"></i></li>
-                        <li><a href="#">Community</a><i class="fa fa-angle-right"></i></li>
-                        <li><a href="#">Contact us</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="#">О нас</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="#">Портфолио</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="#">Изготовление печатей и штампов</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="#">Лазерная резка и гравировка</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="#">Контакты</a><i class="fa fa-angle-right"></i></li>
                     </ul>
+
+                    <div class="headline"><h2>График работы</h2></div>
+                    <address class="md-margin-bottom-40">
+                        Пн - Пт - 09.00:18.00, <br />
+                        Сб - 09.00:14.00, <br />
+                        Вс -выходной <br />
+                        Обед — 13.00 — 14.00 <br />
+                    </address>
+
                 </div><!--/col-md-3-->
                 <!-- End Link List -->
 
                 <!-- Address -->
                 <div class="col-md-3 map-img md-margin-bottom-40">
-                    <div class="headline"><h2>Contact Us</h2></div>
+                    <div class="headline"><h2>Связаться с нами</h2></div>
                     <address class="md-margin-bottom-40">
-                        25, Lorem Lis Street, Orange <br />
-                        California, US <br />
-                        Phone: 800 123 3456 <br />
+                        040700, РК, Алматинская область, Илийский район, <br />
+                        п.Отеген батыр, ул.Титова 19 «а», напротив школы №7 <br />
+                        Телефоны: +7 727 387 97 91 <br />
+                                  +7 701 753 58 04 <br />
+                                  +7 701 753 58 12 <br />
+                                  +7 727 387 97 91 <br />
                         Fax: 800 123 3456 <br />
-                        Email: <a href="mailto:info@anybiz.com" class="">info@anybiz.com</a>
+                        Email: <a href="mailto:expresscopy.kz@mail.ru" class="">expresscopy.kz@mail.ru</a>
                     </address>
                 </div><!--/col-md-3-->
                 <!-- End Address -->
@@ -66,8 +92,8 @@
             <div class="row">
                 <div class="col-md-6">
                     <p>
-                        2016 &copy; All Rights Reserved.
-                        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                        2019 &copy; Все права защищены.
+                        {{--<a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>--}}
                     </p>
                 </div>
 

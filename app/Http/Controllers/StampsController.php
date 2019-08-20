@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Stamp;
+use App\Models\SubCategory;
 use Illuminate\Http\Request;
 
 class StampsController extends Controller
@@ -13,7 +15,10 @@ class StampsController extends Controller
      */
     public function index()
     {
-        return view('stamps.index');
+
+        $data = [];
+        $data['title'] = 'Штампы и Печати';
+        return view('stamps.index',$data);
     }
 
     /**
@@ -45,8 +50,9 @@ class StampsController extends Controller
      */
     public function show($id)
     {
-        //
         $data['id'] = $id;
+        $data['stamps'] = Stamp::where('subcategory_id',$id)->get();
+        //$data['subcategory'] = Stamp::getSubCategory($id);
         return view('stamps.show', $data);
     }
 

@@ -10,4 +10,9 @@ class Stamp extends Model
     protected $fillable = [
         'article', 'subcategory_id', 'title', 'description', 'cost', 'count'
     ];
+
+
+    public static function getSubCategory ($id){
+        return SubCategory::find($id);
+    }
 }
