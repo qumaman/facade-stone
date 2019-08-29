@@ -8,6 +8,6 @@ class Image extends Model
 {
     protected $table = 'images';
     protected $fillable = [
-        'stamp_id', 'title', 'url'
+        'stamp_id', 'title', 'url', 'file_type_id'
     ];
 }

@@ -8,9 +8,10 @@
 
 @section('content')
     <p></p>
-    <div class="col-md-12">
-        <div class="">
-            <form method="post" action="{{ url('admin/stamps/store') }}">
+    <div class="panel">
+    <div class="row">
+        <div class="col-md-12">
+            <form method="post" action="{{ url('admin/stamps/store') }}" enctype="multipart/form-data">
                 <input type="hidden" name="id" value="{{ (!empty($id)?$id:'') }}">
                 <div class="row">
                     <div class="col-md-6">
@@ -53,10 +54,15 @@
                             <label for="count">Количество</label>
                             <input type="number" min="0" step="1" class="form-control" id="count" name="count" value="{{ (!empty($stamp['count'])?$stamp['count']:'') }}">
                         </div>
+                        <div class="form-group">
+                            <label for="image_file">Изображение</label>
+                            {{  Form::file('image_file', null) }}
+                        </div>
                         {!! Form::submit('Отправить', ['class' => 'btn btn-info']) !!}
                     </div>
                 </div>
             </form>
         </div>
+    </div>
     </div>
 @stop
