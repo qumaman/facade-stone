@@ -82,3 +82,11 @@ a:hover {
     text-align: center !important;
     margin: 0 auto !important;
 }
+
+.text-danger {
+    color: #a94442 !important;
+}
+
+.text-success {
+    color: #3c763d !important;
+}
