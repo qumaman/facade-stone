@@ -225,8 +225,8 @@ class StampController extends Controller
         }
         // проверка мин. размера файла
         $rules.='|min:1';
-
-        $validation_attributes_and_custom = trans('validation.attributes'); // Присваиваем стандартные аттрибуты файлов перевода
+        $validation_attributes_and_custom = [];
+        //$validation_attributes_and_custom = trans('validation.attributes'); // Присваиваем стандартные аттрибуты файлов перевода
         $validation_attributes_and_custom[$name] = $name; // Добавляем свои значения, так как они только на одном языке приходят
         $validator = Validator::make(array($name=>$file), array($name=>$rules), array(), $validation_attributes_and_custom); // Конструктор   public function __construct(Translator $translator, array $data, array $rules,array $messages = [], array $customAttributes = []) (http://stackoverflow.com/questions/17047116/laravel-validation-attributes-nice-names)
         if($validator->passes()){
