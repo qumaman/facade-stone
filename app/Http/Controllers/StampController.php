@@ -237,8 +237,9 @@ class StampController extends Controller
             $path = $file_path.'/'.$record_id.'/'; //в зависимости от типа прикреляемого файла заносим в каталог(имя каталога из file_types поле path) + каталог объекта
             $file->move($path, $file_name);
             $insert = array();
-            $insert['title'] = $record_id.'/'.$file_name;
+            $insert['title'] = $file_name;
             $insert['stamp_id'] = $record_id;
+            $insert['url'] = $record_id.'/'.$file_name;
             $insert['file_type_id'] = $file_type_id;
             //$insert['user_id'] = User::getUserID();
             $res = Image::create($insert);
