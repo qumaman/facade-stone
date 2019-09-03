@@ -192,7 +192,7 @@ class StampController extends Controller
 
         $rules = '';
         $file_path = FileStorageType::findOrFail($file_type_id)->path; //путь к каталогу файла общий
-        if(is_null($attachmentId)) {
+        if(is_null($record_id)) {
             $file_type = FileStorageType::findOrFail($file_type_id);
             // проверка расширений
             if ($file_type->file_extension != '') {
@@ -208,7 +208,7 @@ class StampController extends Controller
                 $rules .= '|max:Field file_extension empty in DB!';
             }
         } else {
-            $file_type = Attachment::findOrFail($attachmentId);
+            $file_type = Attachment::findOrFail($record_id);
             // проверка расширений
             if ($file_type->file_extension != '') {
                 $rules .= 'mimes:' . $file_type->file_extension;
@@ -232,16 +232,16 @@ class StampController extends Controller
         if($validator->passes()){
             $file_extension = $file->getClientOriginalExtension();
             if(is_null($record_id))
-                $record_id = FileStorage::max('id') + 1;
+                $record_id = Image::max('id') + 1;
             $file_name = $record_id.'_'.$file_type->file_type.'_'.(FileStorage::max('id') + 1).'_'.time().'.'.$file_extension;
             $path = $file_path.'/'.$record_id.'/'; //в зависимости от типа прикреляемого файла заносим в каталог(имя каталога из file_types поле path) + каталог объекта
             $file->move($path, $file_name);
             $insert = array();
-            $insert['filename'] = $record_id.'/'.$file_name;
-            $insert['record_id'] = $record_id;
+            $insert['title'] = $record_id.'/'.$file_name;
+            $insert['stamp_id'] = $record_id;
             $insert['file_type_id'] = $file_type_id;
-            $insert['user_id'] = User::getUserID();
-            $res = FileStorage::create($insert);
+            //$insert['user_id'] = User::getUserID();
+            $res = Image::create($insert);
             return $res->id;
         }
         else {
