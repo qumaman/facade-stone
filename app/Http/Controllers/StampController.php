@@ -85,7 +85,7 @@ class StampController extends Controller
             $image_file = Input::file('image_file');
             $check = $this->addFile($image_file, null, 1, 'Печати и штампы');
             if(!is_numeric($check))
-                return Redirect::back()->withInput($data)->withErrors($check);
+                return view('admin.stamp.list', $data)->withInput($data)->withErrors($check);
 
         } else {
             return Redirect::back()->withErrors($data['filename_ru']);
