@@ -233,7 +233,7 @@ class StampController extends Controller
             $file_extension = $file->getClientOriginalExtension();
             if(is_null($record_id))
                 $record_id = Image::max('id') + 1;
-            $file_name = $record_id.'_'.$file_type->file_type.'_'.(FileStorage::max('id') + 1).'_'.time().'.'.$file_extension;
+            $file_name = $record_id.'_'.$file_type->file_type.'_'.(Image::max('id') + 1).'_'.time().'.'.$file_extension;
             $path = $file_path.'/'.$record_id.'/'; //в зависимости от типа прикреляемого файла заносим в каталог(имя каталога из file_types поле path) + каталог объекта
             $file->move($path, $file_name);
             $insert = array();
