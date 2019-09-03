@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Attachment;
+use App\Models\FileStorage;
 use App\Models\FileStorageType;
 use App\Models\Image;
 use App\Models\Stamp;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Validator;
 
 class StampController extends Controller
@@ -73,17 +78,21 @@ class StampController extends Controller
             $stamp->cost = $request->cost;
             $stamp->count = $request->count;
         }
-        $stamp = Stamp::createOrUpdate([])
+        //$stamp = Stamp::createOrUpdate([])
         $stamp->save();
 
         if ($request->hasFile('image_file')){
-            $file = $request->file('image_file');
+            $image_file = Input::file('image_file');
+            $check = $this->addFile($image_file, null, 1, 'Печати и штампы');
+            if(!is_numeric($check))
+                return Redirect::back()->withInput($data)->withErrors($check);
 
-            $data['filename_ru'] = $this->addFile($file, null, 1, $request->title);
-            if(!is_numeric($data['filename_ru'])) //если не номер (id файла) то (array) выкидываем ошибку
-                return Redirect::back()->withErrors($data['filename_ru']);
         } else {
+            return Redirect::back()->withErrors($data['filename_ru']);
         }
+
+
+
         //return redirect('/admin/stamps')->with('success', 'Печать был добавлен успешно!');
     }
 
@@ -136,23 +145,83 @@ class StampController extends Controller
         //
     }
 
+    final protected function downloadFile ($file_id) {
+        $file = FileStorage::findOrFail($file_id);
+        $file_type = FileStorageType::findOrFail($file->file_type_id);
+
+        $download = $file_type->path.$file->filename; //echo '<pre>'; var_dump($download); die;
+
+        if (!file_exists($download)){
+            return Redirect::back()->with('error',trans('error.file_not_found'));
+        }
+
+        if (!$this->checkAccessLevel($file_id)) {
+            return Redirect::back()->with('error', trans('error.file_access_error'));
+        }
+
+        return Response::download($download);
+    }
+
+    final public static function getFileInput ($field_name, $file_id = null, $person_id = null, $validate_class='') {
+        $res = '';
+        $file = FileStorage::find($file_id);
+        if(!empty($file->id)) {
+            $res .= '<a href="'.URL::action ("StampController@downloadFile",  $file_id).'" class="file-download">'.trans('general.download').'</a>';
+            $res .= ' <span class="file-download file-delete" style="cursor:pointer" data-fileId='.$file_id.' data-fileName='.$field_name.' data-personId='.$person_id.' title='.trans("general.delete").'><i class="glyphicon glyphicon-pencil" style="color: rgb(101, 116, 131);" aria-hidden="true"></i></span>';
+            $res .= Form::file($field_name, array('class'=>$validate_class.' file-upload hidden'));
+            $res .= '<span class="file-restore file-upload hidden" style="cursor:pointer" data-fileName="'.$field_name.'">'.trans('main.file_restore').'</span>';
+        }
+        else
+            $res .= Form::file($field_name, array('class'=>$validate_class));
+
+        return $res;
+    }
+
+    final public static function getFileInputView ($field_name, $file_id = null, $validate_class='') {
+        $res = '';
+        if($file_id != null && $file_id>0) {
+            $res .= '<a href="'.URL::action ("StampController@downloadFile",  $file_id).'" class="file-download">'.trans('general.download').'</a>';
+        }
+        else
+            $res .= Form::file($field_name, array('class'=>$validate_class));
+
+        return $res;
+    }
+
     protected function addFile ($file, $record_id, $file_type_id, $name) {
 
         $rules = '';
         $file_path = FileStorageType::findOrFail($file_type_id)->path; //путь к каталогу файла общий
-        $file_type = FileStorageType::findOrFail($file_type_id);
-        // проверка расширений
-        if ($file_type->file_extension != '') {
-            $rules .= 'mimes:' . $file_type->file_extension;
+        if(is_null($attachmentId)) {
+            $file_type = FileStorageType::findOrFail($file_type_id);
+            // проверка расширений
+            if ($file_type->file_extension != '') {
+                $rules .= 'mimes:' . $file_type->file_extension;
+            } else {
+                $file_type->file_extension = 'Field file_extension empty in DB!';
+                $rules .= 'mimes:' . $file_type->file_extension;
+            }
+            // проверка макс. размера файла
+            if ($file_type->file_maxsize > 0) {
+                $rules .= '|max:' . $file_type->file_maxsize;
+            } else {
+                $rules .= '|max:Field file_extension empty in DB!';
+            }
         } else {
-            $file_type->file_extension = 'Field file_extension empty in DB!';
-            $rules .= 'mimes:' . $file_type->file_extension;
-        }
-        // проверка макс. размера файла
-        if ($file_type->file_maxsize > 0) {
-            $rules .= '|max:' . $file_type->file_maxsize;
-        } else {
-            $rules .= '|max:Field file_extension empty in DB!';
+            $file_type = Attachment::findOrFail($attachmentId);
+            // проверка расширений
+            if ($file_type->file_extension != '') {
+                $rules .= 'mimes:' . $file_type->file_extension;
+            } else {
+                $file_type->file_extension = 'Field file_extension empty in DB!';
+                $rules .= 'mimes:' . $file_type->file_extension;
+            }
+            // проверка макс. размера файла
+            if ($file_type->file_maxsize > 0) {
+                $rules .= '|max:' . $file_type->file_maxsize;
+            } else {
+                $rules .= '|max:Field file_extension empty in DB!';
+            }
         }
         // проверка мин. размера файла
         $rules.='|min:1';
@@ -163,15 +232,16 @@ class StampController extends Controller
         if($validator->passes()){
             $file_extension = $file->getClientOriginalExtension();
             if(is_null($record_id))
-                $record_id = Image::max('id') + 1;
-            $file_name = $record_id.'_'.$file_type->file_type.'_'.(Image::max('id') + 1).'_'.time().'.'.$file_extension;
+                $record_id = FileStorage::max('id') + 1;
+            $file_name = $record_id.'_'.$file_type->file_type.'_'.(FileStorage::max('id') + 1).'_'.time().'.'.$file_extension;
             $path = $file_path.'/'.$record_id.'/'; //в зависимости от типа прикреляемого файла заносим в каталог(имя каталога из file_types поле path) + каталог объекта
             $file->move($path, $file_name);
             $insert = array();
-            $insert['url'] = $record_id.'/'.$file_name;
-            $insert['stamp_id'] = $record_id;
+            $insert['filename'] = $record_id.'/'.$file_name;
+            $insert['record_id'] = $record_id;
             $insert['file_type_id'] = $file_type_id;
-            $res = Image::create($insert);
+            $insert['user_id'] = User::getUserID();
+            $res = FileStorage::create($insert);
             return $res->id;
         }
         else {

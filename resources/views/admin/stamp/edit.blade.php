@@ -11,7 +11,7 @@
     <div class="panel">
     <div class="row">
         <div class="col-md-12">
-            <form method="post" action="{{ url('admin/stamps/store') }}" enctype="multipart/form-data">
+            {{ Form::open(['url' => url('admin/stamps/store'),'method' => 'post','role' => 'form','files' => 'true','enctype'=>'multipart/form-data']) }}
                 <input type="hidden" name="id" value="{{ (!empty($id)?$id:'') }}">
                 <div class="row">
                     <div class="col-md-6">
@@ -61,7 +61,7 @@
                         {!! Form::submit('Отправить', ['class' => 'btn btn-info']) !!}
                     </div>
                 </div>
-            </form>
+            {{Form::close() }}
         </div>
     </div>
     </div>
