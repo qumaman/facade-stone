@@ -12,13 +12,28 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    $data['menu'] = 'index';
+    return view('index', $data);
 });
+Route::get('/stamp', function () {
+    $data['menu'] = 'stamp';
+    return view('stamp', $data);
+});
+Route::get('/laser', function () {
+    $data['menu'] = 'laser';
+    return view('laser', $data);
+});
+Route::get('/design', function () {
+    $data['menu'] = 'design';
+    return view('design', $data);
+});
+
 Route::resource('stamps', 'StampsController');
 Route::prefix('admin')->group(function () {
     Route::post('stamps/store', 'StampController@store');
     Route::resource('stamps', 'StampController');
 });
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

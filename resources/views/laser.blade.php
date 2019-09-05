@@ -6,44 +6,8 @@
     <div class="col-md-3">
         <ul class="list-group sidebar-nav-v1" id="sidebar-nav">
             <li class="list-group-item list-toggle">
-                <a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-stamps1" aria-expanded="false">Полиграфия и Дизайн</a>
-                <ul id="collapse-stamps1" class="collapse out">
-                        <li><a href="/stamps/1"> Печати ИП, ТОО, АО</a></li>
-                        <li><a href="/stamps/2"> Врачебные печати</a></li>
-                        <li><a href="/stamps/3"> Гербовые печати в соответствии с требованиями СТ РК 1430-2005</a></li>
-                        <li><a href="/stamps/4"> Печати нотариуса</a>{{--<span class="badge badge-u">New</span>--}}</li>
-                        <li><a href="/stamps/5"> Штампы</a></li>
-                        <li><a href="/stamps/6"> Датеры</a></li>
-                        <li><a href="/stamps/7"> Нумераторы</a></li>
-                        <li><a href="/stamps/8"> Факсимиле</a></li>
-                        <li><a href="/stamps/9"> Экслибрис (личная печать)</a></li>
-                        <li><a href="/stamps/10"> Печати по оттиску и эскизу</a></li>
-                        <li><a href="/stamps/11"> Клише для печатей и штампов</a></li>
-                        <li><a href="/stamps/12"> Ликвидация печати</a></li>
-                        <li><a href="/stamps/13"> Аксессуары</a></li>
-                </ul>
-            </li>
-            <li class="list-group-item list-toggle">
-                <a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-stamps2" aria-expanded="false">Печати и штампы</a>
-                <ul id="collapse-stamps2" class="collapse">
-                        <li><a href="/stamps/1"> Печати ИП, ТОО, АО</a></li>
-                        <li><a href="/stamps/2"> Врачебные печати</a></li>
-                        <li><a href="/stamps/3"> Гербовые печати в соответствии с требованиями СТ РК 1430-2005</a></li>
-                        <li><a href="/stamps/4"> Печати нотариуса</a>{{--<span class="badge badge-u">New</span>--}}</li>
-                        <li><a href="/stamps/5"> Штампы</a></li>
-                        <li><a href="/stamps/6"> Датеры</a></li>
-                        <li><a href="/stamps/7"> Нумераторы</a></li>
-                        <li><a href="/stamps/8"> Факсимиле</a></li>
-                        <li><a href="/stamps/9"> Экслибрис (личная печать)</a></li>
-                        <li><a href="/stamps/10"> Печати по оттиску и эскизу</a></li>
-                        <li><a href="/stamps/11"> Клише для печатей и штампов</a></li>
-                        <li><a href="/stamps/12"> Ликвидация печати</a></li>
-                        <li><a href="/stamps/13"> Аксессуары</a></li>
-                </ul>
-            </li>
-            <li class="list-group-item list-toggle">
-                <a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-stamps3" aria-expanded="false">Лазерная резка и гравировка</a>
-                <ul id="collapse-stamps3" class="collapse">
+                <a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-stamps" aria-expanded="true">Печати и штампы</a>
+                <ul id="collapse-stamps" class="collapsed collapse in">
                         <li><a href="/stamps/1"> Печати ИП, ТОО, АО</a></li>
                         <li><a href="/stamps/2"> Врачебные печати</a></li>
                         <li><a href="/stamps/3"> Гербовые печати в соответствии с требованиями СТ РК 1430-2005</a></li>

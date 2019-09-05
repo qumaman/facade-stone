@@ -53,8 +53,8 @@
         <div class="container">
             <ul class="nav navbar-nav">
                 <!-- Home -->
-                <li class="{{--dropdown--}} active">
-                    <a href="/stamps" {{--href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"--}}>
+                <li class="{{--dropdown--}} {{ ($menu == 'design')?'active':' ' }}">
+                    <a href="/design" {{--href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"--}}>
                         Полиграфия и Дизайн
                     </a>
                     {{--<ul class="dropdown-menu">
@@ -165,8 +165,8 @@
                 </li>
                 <!-- End Home -->
                 <!-- Home -->
-                <li {{--class="dropdown"--}}>
-                    <a href="#" {{--href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"--}}>
+                <li class="{{--dropdown--}} {{ ($menu == 'stamp')?'active':' ' }}">
+                    <a href="/stamp" {{--href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"--}}>
                         Изготовление печатей и штампов
                     </a>
                     {{--<ul class="dropdown-menu">
@@ -223,8 +223,8 @@
                 </li>
                 <!-- End Home -->
                 <!-- Home -->
-                <li {{--class="dropdown"--}}>
-                    <a href="#" {{-- href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"--}}>
+                <li class="{{--dropdown--}} {{ ($menu == 'laser')?'active':' ' }}">
+                    <a href="/laser" {{-- href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"--}}>
                         Лазерная резка и гравировка
                     </a>
                     {{--<ul class="dropdown-menu">
