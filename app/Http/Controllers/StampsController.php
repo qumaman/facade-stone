@@ -53,7 +53,7 @@ class StampsController extends Controller
     {
         $data['id'] = $id;
         $data['menu'] = 'stamp';
-        $data['stamps'] = Stamp::where('subcategory_id',$id)->leftjoin('images','images.stamp_id','=','stamps.id')->select('stamps.id, stamps.title as name, stamps.article, stamps.cost, stamps.count, images.url')->get();
+        $data['stamps'] = Stamp::where('subcategory_id',$id)->leftjoin('images','images.stamp_id','=','stamps.id')->select('stamps.id, stamps.title, stamps.article, stamps.cost, stamps.count, images.url')->get();
         //$data['subcategory'] = Stamp::getSubCategory($id);
         return view('stamps.show', $data);
     }
