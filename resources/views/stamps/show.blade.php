@@ -42,7 +42,7 @@
                                     <a class="btn-more hover-effect" href="#">подробнее +</a>
                                 </div>
                                 <div class="caption">
-                                    <h3><a class="hover-effect" href="#">{{ $stamp['title'] }}</a></h3>
+                                    <h3><a class="hover-effect" href="#">{{ $stamp['stamps.title'] }}</a></h3>
                                     <p>{{ $stamp['article'] }}</p>
                                 </div>
                             </div>
