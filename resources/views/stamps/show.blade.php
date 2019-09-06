@@ -36,13 +36,21 @@
                             <div class="thumbnails thumbnail-style thumbnail-kenburn">
                                 <div class="thumbnail-img">
                                     <div class="overflow-hidden">
-                                        {{--<img class="img-responsive" src="/images/stamps/46045-pechat.jpg" alt="">--}}
-                                        <img class="img-responsive" src="/images/stamps/{{ $stamp['url'] }}" alt="">
+                                        @php
+                                            $stamp_images = \App\Models\Image::where('stamp_id',$stamp)->get();
+                                        @endphp
+                                        @if (\App\Models\Image::where('stamp_id',$stamp)->exists())
+                                            @foreach($stamp_images as $stamp_image)
+                                                <img class="img-responsive" src="/images/stamps/{{ $stamp_image['url'] }}" alt="">
+                                            @endforeach
+                                        @else
+                                            <img class="img-responsive" src="/images/stamps/46045-pechat.jpg" alt="">
+                                        @endif
                                     </div>
                                     <a class="btn-more hover-effect" href="#">подробнее +</a>
                                 </div>
                                 <div class="caption">
-                                    <h3><a class="hover-effect" href="#">{{ $stamp['stamps.title'] }}</a></h3>
+                                    <h3><a class="hover-effect" href="#">{{ $stamp['title'] }}</a></h3>
                                     <p>{{ $stamp['article'] }}</p>
                                 </div>
                             </div>
