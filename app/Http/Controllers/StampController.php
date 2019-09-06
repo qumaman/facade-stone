@@ -83,7 +83,7 @@ class StampController extends Controller
 
         if ($request->hasFile('image_file')){
             $image_file = Input::file('image_file');
-            $check = $this->addFile($image_file, null, 1, 'Печати и штампы');
+            $check = $this->addFile($image_file, $stamp->id, 1, 'Печати и штампы');
             if(!is_numeric($check))
                 return Redirect::action('StampController@index')->withInput($data)->withErrors($check);
 
