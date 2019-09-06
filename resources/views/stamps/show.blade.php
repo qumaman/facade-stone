@@ -37,8 +37,8 @@
                                 <div class="thumbnail-img">
                                     <div class="overflow-hidden">
                                         @php
-                                            $stamp_images1 = \App\Models\Image::where('stamp_id',$stamp['id'])->where('file_type_id',1)->orderBy('id', 'DESC')->firstOrFail();
-                                            $stamp_images2 = \App\Models\Image::where('stamp_id',$stamp['id'])->where('file_type_id',2)->orderBy('id', 'DESC')->firstOrFail();
+                                            $stamp_images1 = \App\Models\Image::where('stamp_id',$stamp['id'])->where('file_type_id',1)->orderBy('id', 'DESC')->first();
+                                            $stamp_images2 = \App\Models\Image::where('stamp_id',$stamp['id'])->where('file_type_id',2)->orderBy('id', 'DESC')->first();
                                         @endphp
                                         @if ($stamp_images1)
                                             <img class="img-responsive" src="/images/stamps/{{ $stamp_images1['url'] }}" alt="">
