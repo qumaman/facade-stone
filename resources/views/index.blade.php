@@ -391,32 +391,26 @@
             <!-- Owl Clients v1 -->
             <div class="headline"><h2>Наши клиенты</h2></div>
             <div class="owl-clients-v1">
-                <div class="item">
-                    <img src="assets/img/clients4/1.png" alt="">
+                <div class="item py-1">
+                    <img src="assets/img/clients5/nationalbank.png" alt="">
                 </div>
                 <div class="item">
-                    <img src="assets/img/clients4/2.png" alt="">
+                    <img src="assets/img/clients5/KazEnergoGroup.png" alt="">
                 </div>
                 <div class="item">
-                    <img src="assets/img/clients4/3.png" alt="">
+                    <img src="assets/img/clients5/kazng.png" alt="">
+                </div>
+                <div class="item py-2 px-2">
+                    <img src="assets/img/clients5/htl.png" alt="">
                 </div>
                 <div class="item">
-                    <img src="assets/img/clients4/4.png" alt="">
+                    <img src="assets/img/clients5/Nanotech Paints.png" alt="">
                 </div>
-                <div class="item">
-                    <img src="assets/img/clients4/5.png" alt="">
+                <div class="item px-2">
+                    <img src="assets/img/clients5/damulogistics.png" alt="">
                 </div>
-                <div class="item">
-                    <img src="assets/img/clients4/6.png" alt="">
-                </div>
-                <div class="item">
-                    <img src="assets/img/clients4/7.png" alt="">
-                </div>
-                <div class="item">
-                    <img src="assets/img/clients4/8.png" alt="">
-                </div>
-                <div class="item">
-                    <img src="assets/img/clients4/9.png" alt="">
+                <div class="item py-1">
+                    <img src="assets/img/clients5/tam.png" alt="">
                 </div>
             </div>
             <!-- End Owl Clients v1 -->
