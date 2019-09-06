@@ -93,7 +93,7 @@ class StampController extends Controller
 
 
 
-        //return redirect('/admin/stamps')->with('success', 'Печать был добавлен успешно!');
+        return redirect('/admin/stamps')->with('success', 'Печать был добавлен успешно!');
     }
 
     /**
