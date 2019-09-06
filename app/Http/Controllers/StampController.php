@@ -87,8 +87,6 @@ class StampController extends Controller
             if(!is_numeric($check))
                 return Redirect::action('StampController@index')->withInput($data)->withErrors($check);
 
-        } else {
-            return Redirect::back()->withErrors($data['filename_ru']);
         }
 
 
