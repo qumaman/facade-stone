@@ -89,8 +89,8 @@ class StampController extends Controller
 
         }
         if ($request->hasFile('image_file1')){
-            $image_file = Input::file('image_file1');
-            $check = $this->addFile($image_file, $stamp->id, 2, 'Эскиз');
+            $image_file1 = Input::file('image_file1');
+            $check = $this->addFile($image_file1, $stamp->id, 2, 'Эскиз');
             if(!is_numeric($check))
                 return Redirect::action('StampController@index')->withInput($data)->withErrors($check);
 
@@ -197,36 +197,19 @@ class StampController extends Controller
 
         $rules = '';
         $file_path = FileStorageType::findOrFail($file_type_id)->path; //путь к каталогу файла общий
-        if(is_null($record_id)) {
-            $file_type = FileStorageType::findOrFail($file_type_id);
-            // проверка расширений
-            if ($file_type->file_extension != '') {
-                $rules .= 'mimes:' . $file_type->file_extension;
-            } else {
-                $file_type->file_extension = 'Field file_extension empty in DB!';
-                $rules .= 'mimes:' . $file_type->file_extension;
-            }
-            // проверка макс. размера файла
-            if ($file_type->file_maxsize > 0) {
-                $rules .= '|max:' . $file_type->file_maxsize;
-            } else {
-                $rules .= '|max:Field file_extension empty in DB!';
-            }
+        $file_type = FileStorageType::findOrFail($file_type_id);
+        // проверка расширений
+        if ($file_type->file_extension != '') {
+            $rules .= 'mimes:' . $file_type->file_extension;
         } else {
-            $file_type = FileStorageType::findOrFail($file_type_id);
-            // проверка расширений
-            if ($file_type->file_extension != '') {
-                $rules .= 'mimes:' . $file_type->file_extension;
-            } else {
-                $file_type->file_extension = 'Field file_extension empty in DB!';
-                $rules .= 'mimes:' . $file_type->file_extension;
-            }
-            // проверка макс. размера файла
-            if ($file_type->file_maxsize > 0) {
-                $rules .= '|max:' . $file_type->file_maxsize;
-            } else {
-                $rules .= '|max:Field file_extension empty in DB!';
-            }
+            $file_type->file_extension = 'Field file_extension empty in DB!';
+            $rules .= 'mimes:' . $file_type->file_extension;
+        }
+        // проверка макс. размера файла
+        if ($file_type->file_maxsize > 0) {
+            $rules .= '|max:' . $file_type->file_maxsize;
+        } else {
+            $rules .= '|max:Field file_extension empty in DB!';
         }
         // проверка мин. размера файла
         $rules.='|min:1';
