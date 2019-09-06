@@ -48,11 +48,11 @@
                         </div>
                         <div class="form-group">
                             <label for="cost">Цена</label>
-                            <input type="number" min="0" step="1" class="form-control" id="cost" name="cost" value="{{ (!empty($stamp['cost'])?$stamp['cost']:'') }}">
+                            <input type="number" min="0" step="1" class="form-control" id="cost" name="cost" value="{{ (!empty($stamp['cost'])?$stamp['cost']:0) }}">
                         </div>
                         <div class="form-group">
                             <label for="count">Количество</label>
-                            <input type="number" min="0" step="1" class="form-control" id="count" name="count" value="{{ (!empty($stamp['count'])?$stamp['count']:'') }}">
+                            <input type="number" min="0" step="1" class="form-control" id="count" name="count" value="{{ (!empty($stamp['count'])?$stamp['count']:0) }}">
                         </div>
                         <div class="form-group">
                             <label for="image_file">Изображение</label>
