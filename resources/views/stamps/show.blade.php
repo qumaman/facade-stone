@@ -46,7 +46,7 @@
                                             <img class="img-responsive" src="/images/stamps/46045-pechat.jpg" alt="">
                                         @endif
                                         @if ($stamp_images2)
-                                            <img class="img-responsive" src="/images/stamps/{{ $stamp_images2['url'] }}" alt="">
+                                            <img class="img-responsive" src="/images/stamps/thumbs/{{ $stamp_images2['url'] }}" alt="">
                                         @endif
                                     </div>
                                     <a class="btn-more hover-effect" href="#">подробнее +</a>
