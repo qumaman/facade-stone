@@ -15,6 +15,7 @@
                     <tr>
                         <td>#</td>
                         <td>Наименование</td>
+                        <td>Артикул</td>
                         <td>Описание</td>
                         <td><a href="/admin/stamps/create" class="btn btn-success">Добавить</a></td>
                     </tr>
@@ -24,6 +25,7 @@
                     <tr>
                         <td>{{ $stamp->id }}</td>
                         <td>{{ $stamp->title }}</td>
+                        <td>{{ $stamp->article }}</td>
                         <td>{{ $stamp->description }}</td>
                         <td>
                             <a href="{{ route('stamps.edit',$stamp->id)}}" class="btn btn-primary">Редактировать</a>
