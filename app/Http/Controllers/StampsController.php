@@ -17,6 +17,7 @@ class StampsController extends Controller
     {
 
         $data = [];
+        $data['menu'] = 'stamp';
         $data['title'] = 'Штампы и Печати';
         return view('stamps.index',$data);
     }
@@ -51,6 +52,7 @@ class StampsController extends Controller
     public function show($id)
     {
         $data['id'] = $id;
+        $data['menu'] = 'stamp';
         $data['stamps'] = Stamp::where('subcategory_id',$id)->get();
         //$data['subcategory'] = Stamp::getSubCategory($id);
         return view('stamps.show', $data);
