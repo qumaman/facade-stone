@@ -208,7 +208,7 @@ class StampController extends Controller
                 $rules .= '|max:Field file_extension empty in DB!';
             }
         } else {
-            $file_type = FileStorageType::findOrFail($record_id);
+            $file_type = FileStorageType::findOrFail($file_type_id);
             // проверка расширений
             if ($file_type->file_extension != '') {
                 $rules .= 'mimes:' . $file_type->file_extension;
