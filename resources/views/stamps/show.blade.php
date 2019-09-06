@@ -38,8 +38,9 @@
                                     <div class="overflow-hidden">
                                         @php
                                             $stamp_images = \App\Models\Image::where('stamp_id',$stamp['id'])->get();
+                                            $images_exist = \App\Models\Image::where('stamp_id',$stamp['id'])->firstOrFail();
                                         @endphp
-                                        @if (\App\Models\Image::where('stamp_id',$stamp)->exists())
+                                        @if ($images_exist)
                                             @foreach($stamp_images as $stamp_image)
                                                 <img class="img-responsive" src="/images/stamps/{{ $stamp_image['url'] }}" alt="">
                                             @endforeach
