@@ -29,5 +29,8 @@
         <div class="form-group text-left"><label for="">Изображение</label>
             <input type="file" name="stamps[file]" value="" class="form-control">
         </div>
+        <div class="form-group text-left"><label for="">Эскиз</label>
+            <input type="file" name="stamps[file1]" value="" class="form-control">
+        </div>
     </div>
 @stop

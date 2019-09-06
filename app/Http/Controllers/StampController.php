@@ -88,6 +88,13 @@ class StampController extends Controller
                 return Redirect::action('StampController@index')->withInput($data)->withErrors($check);
 
         }
+        if ($request->hasFile('image_file1')){
+            $image_file = Input::file('image_file1');
+            $check = $this->addFile($image_file, $stamp->id, 2, 'Эскиз');
+            if(!is_numeric($check))
+                return Redirect::action('StampController@index')->withInput($data)->withErrors($check);
+
+        }
 
 
 

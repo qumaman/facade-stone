@@ -58,6 +58,10 @@
                             <label for="image_file">Изображение</label>
                             {{  Form::file('image_file', null) }}
                         </div>
+                        <div class="form-group">
+                            <label for="image_file1">Эскиз</label>
+                            {{  Form::file('image_file1', null) }}
+                        </div>
                         {!! Form::submit('Отправить', ['class' => 'btn btn-info']) !!}
                     </div>
                 </div>
