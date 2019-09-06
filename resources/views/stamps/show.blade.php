@@ -37,7 +37,7 @@
                                 <div class="thumbnail-img">
                                     <div class="overflow-hidden">
                                         @php
-                                            $stamp_images = \App\Models\Image::where('stamp_id',$stamp)->get();
+                                            $stamp_images = \App\Models\Image::where('stamp_id',$stamp['id'])->get();
                                         @endphp
                                         @if (\App\Models\Image::where('stamp_id',$stamp)->exists())
                                             @foreach($stamp_images as $stamp_image)
