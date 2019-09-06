@@ -157,12 +157,10 @@ class StampController extends Controller
         $download = $file_type->path.$file->filename; //echo '<pre>'; var_dump($download); die;
 
         if (!file_exists($download)){
-            var_dump('file_not_found');
             return Redirect::back()->with('error',trans('error.file_not_found'));
         }
 
         if (!$this->checkAccessLevel($file_id)) {
-            var_dump('file_access_error');
             return Redirect::back()->with('error', trans('error.file_access_error'));
         }
 
@@ -213,8 +211,6 @@ class StampController extends Controller
         } else {
             $rules .= '|max:Field file_extension empty in DB!';
         }
-
-        var_dump('file_extension');
         // проверка мин. размера файла
         $rules.='|min:1';
         $validation_attributes_and_custom = [];
@@ -235,13 +231,9 @@ class StampController extends Controller
             $insert['file_type_id'] = $file_type_id;
             //$insert['user_id'] = User::getUserID();
             $res = Image::create($insert);
-
-            var_dump('result');
             return $res->id;
         }
         else {
-
-            var_dump('error');
             return $validator->errors()->all();
         }
 
