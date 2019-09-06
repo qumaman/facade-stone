@@ -36,7 +36,8 @@
                             <div class="thumbnails thumbnail-style thumbnail-kenburn">
                                 <div class="thumbnail-img">
                                     <div class="overflow-hidden">
-                                        <img class="img-responsive" src="/images/stamps/46045-pechat.jpg" alt="">
+                                        {{--<img class="img-responsive" src="/images/stamps/46045-pechat.jpg" alt="">--}}
+                                        <img class="img-responsive" src="/images/stamps/{{ $stamp['url'] }}" alt="">
                                     </div>
                                     <a class="btn-more hover-effect" href="#">подробнее +</a>
                                 </div>
