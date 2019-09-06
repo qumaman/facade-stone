@@ -37,15 +37,16 @@
                                 <div class="thumbnail-img">
                                     <div class="overflow-hidden">
                                         @php
-                                            $stamp_images = \App\Models\Image::where('stamp_id',$stamp['id'])->get();
-                                            $images_exist = \App\Models\Image::where('stamp_id',$stamp['id'])->firstOrFail();
+                                            $stamp_images1 = \App\Models\Image::where('stamp_id',$stamp['id'])->where('file_type_id',1)->firstOrFail();
+                                            $stamp_images2 = \App\Models\Image::where('stamp_id',$stamp['id'])->where('file_type_id',2)->firstOrFail();
                                         @endphp
-                                        @if ($images_exist)
-                                            @foreach($stamp_images as $stamp_image)
-                                                <img class="img-responsive" src="/images/stamps/{{ $stamp_image['url'] }}" alt="">
-                                            @endforeach
+                                        @if ($stamp_images1)
+                                            <img class="img-responsive" src="/images/stamps/{{ $stamp_images1['url'] }}" alt="">
                                         @else
                                             <img class="img-responsive" src="/images/stamps/46045-pechat.jpg" alt="">
+                                        @endif
+                                        @if ($stamp_images2)
+                                            <img class="img-responsive" src="/images/stamps/{{ $stamp_images2['url'] }}" alt="">
                                         @endif
                                     </div>
                                     <a class="btn-more hover-effect" href="#">подробнее +</a>
