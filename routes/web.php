@@ -29,6 +29,8 @@ Route::get('/design', function () {
 });
 
 Route::resource('stamps', 'StampsController');
+Route::resource('designs', 'DesignsController');
+
 Route::prefix('admin')->group(function () {
     Route::post('stamps/store', 'StampController@store');
     Route::resource('stamps', 'StampController');

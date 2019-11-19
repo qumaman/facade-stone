@@ -6,21 +6,28 @@
     <div class="col-md-3">
         <ul class="list-group sidebar-nav-v1" id="sidebar-nav">
             <li class="list-group-item list-toggle">
-                <a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-stamps" aria-expanded="true">Печати и штампы</a>
-                <ul id="collapse-stamps" class="collapsed collapse in">
-                        <li><a href="/stamps/1"> Печати ИП, ТОО, АО</a></li>
-                        <li><a href="/stamps/2"> Врачебные печати</a></li>
-                        <li><a href="/stamps/3"> Гербовые печати в соответствии с требованиями СТ РК 1430-2005</a></li>
-                        <li><a href="/stamps/4"> Печати нотариуса</a>{{--<span class="badge badge-u">New</span>--}}</li>
-                        <li><a href="/stamps/5"> Штампы</a></li>
-                        <li><a href="/stamps/6"> Датеры</a></li>
-                        <li><a href="/stamps/7"> Нумераторы</a></li>
-                        <li><a href="/stamps/8"> Факсимиле</a></li>
-                        <li><a href="/stamps/9"> Экслибрис (личная печать)</a></li>
-                        <li><a href="/stamps/10"> Печати по оттиску и эскизу</a></li>
-                        <li><a href="/stamps/11"> Клише для печатей и штампов</a></li>
-                        <li><a href="/stamps/12"> Ликвидация печати</a></li>
-                        <li><a href="/stamps/13"> Аксессуары</a></li>
+                <a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-poly-1" aria-expanded="true">Деловая полиграфия</a>
+                <ul id="collapse-poly-1" class="collapsed collapse in">
+                        <li><a href="/designs/1">  Визитки</a></li>
+                        <li><a href="/designs/2">  Листовки</a></li>
+                        <li><a href="/designs/3">  Буклеты</a></li>
+                        <li><a href="/designs/4">  Брошюры</a></li>
+                        <li><a href="/designs/5">  Грамоты/дипломы</a></li>
+                        <li><a href="/designs/6">  Календари</a></li>
+                        <li><a href="/designs/7">  Каталоги</a></li>
+                        <li><a href="/designs/8">  Самокопирующиеся бланки</a></li>
+                        <li><a href="/designs/9">  Меню</a></li>
+                        <li><a href="/designs/10"> Портфолио</a></li>
+                        <li><a href="/designs/11"> Разработка логотипа</a></li>
+                        <li><a href="/designs/12"> Редизайн</a></li>
+                </ul>
+            </li>
+            <li class="list-group-item list-toggle">
+                <a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-poly-2" aria-expanded="true">Праздничная полиграфия</a>
+                <ul id="collapse-poly-2" class="collapsed collapse in">
+                        <li><a href="/designs/21">  Пригласительные</a></li>
+                        <li><a href="/designs/22">  Бонбоньерки</a></li>
+                        <li><a href="/designs/23">  Оформление шоколада</a></li>
                 </ul>
             </li>
         </ul>
@@ -30,7 +37,60 @@
         <!--=== Content Part ===-->
         <div class="">
             <!-- Service Blocks -->
-            <div class="row margin-bottom-30">
+            <div class="row">
+
+                <!-- Flat Testimonials -->
+                <div class="flat-testimonials bg-image-v1 parallaxBg margin-bottom-60">
+                    <div class="container-fluid">
+                        <div class="headline-center headline-light margin-bottom-60">
+                            <h2>Полиграфия и Дизайн</h2>
+                        </div><!--/end Headline Center-->
+
+                        <div class="row mb-5">
+                            <div class="col-sm-4">
+                                <div class="flat-testimonials-in md-margin-bottom-50">
+                                    <img alt="" src="images/polygraphy/listovka.png" class="rounded-x img-responsive">
+                                    <h3>Листовки</h3>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="flat-testimonials-in md-margin-bottom-50">
+                                    <img alt="" src="images/polygraphy/price.png" class="rounded-x img-responsive">
+                                    <h3>Буклеты</h3>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="flat-testimonials-in">
+                                    <img alt="" src="images/polygraphy/pohvala.png" class="rounded-x img-responsive">
+                                    <h3>Грамоты/Дипломы</h3>
+                                </div>
+                            </div>
+                        </div><!--/end row-->
+                        <div class="row mb-5">
+                            <div class="col-sm-4">
+                                <div class="flat-testimonials-in md-margin-bottom-50">
+                                    <img alt="" src="images/polygraphy/listovka.png" class="rounded-x img-responsive">
+                                    <h3>Листовки</h3>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="flat-testimonials-in md-margin-bottom-50">
+                                    <img alt="" src="images/polygraphy/price.png" class="rounded-x img-responsive">
+                                    <h3>Буклеты</h3>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="flat-testimonials-in">
+                                    <img alt="" src="images/polygraphy/pohvala.png" class="rounded-x img-responsive">
+                                    <h3>Грамоты/Дипломы</h3>
+                                </div>
+                            </div>
+                        </div><!--/end row-->
+                    </div><!--/end container-->
+                </div>
+                <!-- End Flat Testimonials -->
+            </div>
+            <!--<div class="row margin-bottom-30">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="headline-center">
@@ -113,12 +173,12 @@
 
                     </div>
                 </div>
-            </div>
+            </div>-->
             <div class="row margin-bottom-30">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="service">
-                            <i class="fa fa-rocket service-icon"></i>
+                            {{--<i class="fa fa-rocket service-icon"></i>--}}
                             <div class="desc">
                                 <h4>Фото-копировальные услуги</h4>
                             </div>
@@ -137,7 +197,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="service">
-                            <i class="fa fa-rocket service-icon"></i>
+                            {{--<i class="fa fa-rocket service-icon"></i>--}}
                             <div class="desc">
                                 <h4>Деловая полиграфия</h4>
                             </div>
@@ -159,7 +219,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="service">
-                            <i class="fa fa-cogs service-icon"></i>
+                            {{--<i class="fa fa-cogs service-icon"></i>--}}
                             <div class="desc">
                                 <h4>Печати и штампы</h4>
                             </div>
@@ -184,7 +244,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="service">
-                            <i class="fa fa-compress service-icon"></i>
+                            {{--<i class="fa fa-compress service-icon"></i>--}}
                             <div class="desc">
                                 <h4>Лазерная резка и гравировка</h4>
                             </div>
@@ -198,7 +258,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="service">
-                            <i class="fa fa-rocket service-icon"></i>
+                            {{--<i class="fa fa-rocket service-icon"></i>--}}
                             <div class="desc">
                                 <h4>Праздничная полиграфия</h4>
                             </div>

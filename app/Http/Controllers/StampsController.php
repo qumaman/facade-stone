@@ -15,7 +15,6 @@ class StampsController extends Controller
      */
     public function index()
     {
-
         $data = [];
         $data['menu'] = 'stamp';
         $data['title'] = 'Штампы и Печати';
