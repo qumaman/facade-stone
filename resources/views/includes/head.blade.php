@@ -1,4 +1,4 @@
-<title>DFM - изделия из фибробетона и травертина</title>
+<title>{{ config('app.name', 'ExpressCopy') }}  </title>
 
 <!-- Meta -->
 <meta charset="utf-8">

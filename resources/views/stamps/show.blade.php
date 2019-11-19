@@ -41,13 +41,14 @@
                                             $stamp_images2 = \App\Models\Image::where('stamp_id',$stamp['id'])->where('file_type_id',2)->orderBy('id', 'DESC')->first();
                                         @endphp
                                         @if ($stamp_images1)
-                                            <img class="img-responsive" src="/images/stamps/{{ $stamp_images1['url'] }}" alt="">
+                                            <a href="/images/stamps/{{ $stamp_images1['url'] }}">
                                         @else
-                                            <img class="img-responsive" src="/images/stamps/46045-pechat.jpg" alt="">
+                                            <a href="/images/stamps/46045-pechat.jpg" >
                                         @endif
-                                        @if ($stamp_images2)
-                                            <img class="img-responsive" src="/images/stamps/thumbs/{{ $stamp_images2['url'] }}" alt="">
-                                        @endif
+                                            @if ($stamp_images2)
+                                                <img class="img-responsive stamp-image" src="/images/stamps/thumbs/{{ $stamp_images2['url'] }}" alt="">
+                                            @endif
+                                            </a>
                                     </div>
                                     <a class="btn-more hover-effect" href="#">подробнее +</a>
                                 </div>
@@ -58,62 +59,6 @@
                             </div>
                         </div>
                     @endforeach
-                    {{--<div class="col-md-3 col-sm-6">
-                        <div class="thumbnails thumbnail-style thumbnail-kenburn">
-                            <div class="thumbnail-img">
-                                <div class="overflow-hidden">
-                                    <img class="img-responsive" src="/images/stamps/46045-pechat.jpg" alt="">
-                                </div>
-                                <a class="btn-more hover-effect" href="#">подробнее +</a>
-                            </div>
-                            <div class="caption">
-                                <h3><a class="hover-effect" href="#">Печать для организация</a></h3>
-                                <p>46045</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="thumbnails thumbnail-style thumbnail-kenburn">
-                            <div class="thumbnail-img">
-                                <div class="overflow-hidden">
-                                    <img class="img-responsive" src="/images/stamps/046045.jpg" alt="">
-                                </div>
-                                <a class="btn-more hover-effect" href="#">подробнее +</a>
-                            </div>
-                            <div class="caption">
-                                <h3><a class="hover-effect" href="#">Печать для организация</a></h3>
-                                <p>046045</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="thumbnails thumbnail-style thumbnail-kenburn">
-                            <div class="thumbnail-img">
-                                <div class="overflow-hidden">
-                                    <img class="img-responsive" src="/images/stamps/046125.jpg" alt="">
-                                </div>
-                                <a class="btn-more hover-effect" href="#">подробнее +</a>
-                            </div>
-                            <div class="caption">
-                                <h3><a class="hover-effect" href="#">Печать для организация</a></h3>
-                                <p>046125</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="thumbnails thumbnail-style thumbnail-kenburn">
-                            <div class="thumbnail-img">
-                                <div class="overflow-hidden">
-                                    <img class="img-responsive" src="/images/stamps/046140P3.jpg" alt="">
-                                </div>
-                                <a class="btn-more hover-effect" href="#">подробнее +</a>
-                            </div>
-                            <div class="caption">
-                                <h3><a class="hover-effect" href="#">Печать для организация</a></h3>
-                                <p>046140P3</p>
-                            </div>
-                        </div>
-                    </div>--}}
                 </div>
                 <!-- End Recent Works -->
 
