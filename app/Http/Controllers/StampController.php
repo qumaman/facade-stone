@@ -50,7 +50,6 @@ class StampController extends Controller
      */
     public function store(Request $request)
     {
-
         $data = Input::all();
         $request->validate([
             'article'=>'required',
@@ -95,9 +94,6 @@ class StampController extends Controller
                 return Redirect::action('StampController@index')->withInput($data)->withErrors($check);
 
         }
-
-
-
         return redirect('/admin/stamps')->with('success', 'Печать был добавлен успешно!');
     }
 

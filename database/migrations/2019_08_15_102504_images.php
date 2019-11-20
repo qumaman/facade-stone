@@ -16,6 +16,7 @@ class Images extends Migration
         Schema::create('images', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('stamp_id');
+            $table->integer('design_id');
             $table->integer('file_type_id');
             $table->string('title');
             $table->string('url');

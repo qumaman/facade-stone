@@ -23,11 +23,11 @@
                     </ul>
                 </li>
                 <li class="list-group-item list-toggle">
-                    <a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-designs" aria-expanded="true">Праздничная полиграфия</a>
-                    <ul id="collapse-designs" class="collapsed collapse in">
-                        <li class="{{ ($id == 21)?'active':'' }}"><a href="/designs/21">   Пригласительные</a></li>
-                        <li class="{{ ($id == 22)?'active':'' }}"><a href="/designs/22">   Бонбоньерки</a></li>
-                        <li class="{{ ($id == 23)?'active':'' }}"><a href="/designs/23">   Оформление шоколада</a></li>
+                    <a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-designs1" aria-expanded="true">Праздничная полиграфия</a>
+                    <ul id="collapse-designs1" class="collapsed collapse in">
+                        <li class="{{ ($id == 13)?'active':'' }}"><a href="/designs/13">   Пригласительные</a></li>
+                        <li class="{{ ($id == 14)?'active':'' }}"><a href="/designs/14">   Бонбоньерки</a></li>
+                        <li class="{{ ($id == 15)?'active':'' }}"><a href="/designs/15">   Оформление шоколада</a></li>
                     </ul>
                 </li>
             </ul>
@@ -36,7 +36,7 @@
             <!--=== Content Part ===-->
             <div class="">
                 <!-- Recent Works -->
-                <div class="headline"><h2>Образцы</h2></div>
+                <div class="headline"><h2>{{ $designs->title }}</h2></div>
                 <div class="row margin-bottom-20 design-images">
                     <div class="col-md-12 col-sm-6">
                         <div class="thumbnails thumbnail-style thumbnail-kenburn row">

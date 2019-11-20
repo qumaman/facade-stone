@@ -6,8 +6,8 @@
     <div class="col-md-3">
         <ul class="list-group sidebar-nav-v1" id="sidebar-nav">
             <li class="list-group-item list-toggle">
-                <a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-poly-1" aria-expanded="true">Деловая полиграфия</a>
-                <ul id="collapse-poly-1" class="collapsed collapse in">
+                <a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-designs" aria-expanded="true">Деловая полиграфия</a>
+                <ul id="collapse-designs" class="collapsed collapse in">
                         <li><a href="/designs/1">  Визитки</a></li>
                         <li><a href="/designs/2">  Листовки</a></li>
                         <li><a href="/designs/3">  Буклеты</a></li>
@@ -23,11 +23,11 @@
                 </ul>
             </li>
             <li class="list-group-item list-toggle">
-                <a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-poly-2" aria-expanded="true">Праздничная полиграфия</a>
-                <ul id="collapse-poly-2" class="collapsed collapse in">
-                        <li><a href="/designs/21">  Пригласительные</a></li>
-                        <li><a href="/designs/22">  Бонбоньерки</a></li>
-                        <li><a href="/designs/23">  Оформление шоколада</a></li>
+                <a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-designs1" aria-expanded="true">Праздничная полиграфия</a>
+                <ul id="collapse-designs1" class="collapsed collapse in">
+                        <li><a href="/designs/13">  Пригласительные</a></li>
+                        <li><a href="/designs/14">  Бонбоньерки</a></li>
+                        <li><a href="/designs/15">  Оформление шоколада</a></li>
                 </ul>
             </li>
         </ul>
